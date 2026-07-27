@@ -100,9 +100,7 @@ def food_supply():
 # motor_on
 #===========================================================================================
 def motor_on():
-    servo.begin()
     servo.write_angle(50)                             # 차단봉 열기
-    servo.end()   
 
     led_red.value(HIGH)                               # DC 모터 켜기
     led_blue.value(HIGH)
@@ -119,9 +117,7 @@ def motor_off():
 
     time.sleep(0.6)                                   #  0.6초간 대기
 
-    servo.begin()
     servo.write_angle(180)                            # 차단봉 닫기
-    servo.end()
 
 
 #===========================================================================================
